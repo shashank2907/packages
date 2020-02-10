@@ -16,9 +16,8 @@ PKG_CPE_ID:=cpe:/a:powerdns:dnsdist
 PKG_INSTALL:=1
 PKG_BUILD_PARALLEL:=1
 
-PKG_ASLR_PIE:=0
-PKG_BUILD_DEPENDS:=protobuf/host
 
+PKG_ASLR_PIE:=0
 PKG_BUILD_DEPENDS:=protobuf/host
 
 PKG_CONFIG_DEPENDS:= \
@@ -107,6 +106,7 @@ CONFIGURE_ARGS+= \
 	--enable-dnscrypt \
 	--enable-dnstap \
 	--with-libsodium \
+	--with-pic \
 	--with-protobuf \
 	--with-re2 \
 	--with-lua=lua \
